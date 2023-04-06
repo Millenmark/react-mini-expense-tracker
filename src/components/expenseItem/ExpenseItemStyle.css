@@ -11,8 +11,9 @@
 }
 
 .expense-item__date {
-  color: var(--color-secondary);
+  color: var(--color-complement);
   font-size: 12px;
+  font-weight: 600;
 }
 
 .expense-item__description {
@@ -33,9 +34,10 @@
 
 .expense-item__price {
   font-size: 1rem;
+  font-weight: 500;
   /* font-weight: bold; */
-  background-color: var(--color-complement);
+  color: var(--color-secondary);
   /* border: 1px solid white; */
-  padding: 0.5rem;
-  border-radius: 5px;
+  /* padding: 0.5rem;
+  border-radius: 5px; */
 }
