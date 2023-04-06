@@ -3,3 +3,8 @@ body {
   background: var(--body-bg);
   font-family: var(--font-family);
 }
+
+.max-width {
+  width: min(100% - 1rem, 1020px);
+  margin-inline: auto;
+}
