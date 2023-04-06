@@ -1,4 +1,5 @@
 body {
   color: white;
-  background: #3f3f3f;
+  background: var(--body-bg);
+  font-family: var(--font-family);
 }

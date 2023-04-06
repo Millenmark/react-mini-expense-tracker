@@ -1,12 +1,13 @@
+import './ExpenseItemStyle.css'
 import React from 'react'
 
 const ExpenseItem = () => {
   return (
-    <div>
+    <div className='expense-item'>
       <div>Date</div>
-      <div>
+      <div className='expense-item__description'>
         <h2>Title</h2>
-        <div>Amount</div>
+        <div className='expense-item__price'>Amount</div>
       </div>
     </div>
   )
