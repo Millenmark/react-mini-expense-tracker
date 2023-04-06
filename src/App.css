@@ -4,7 +4,7 @@ body {
   font-family: var(--font-family);
 }
 
-.max-width {
+.container {
   width: min(100% - 1rem, 1020px);
   margin-inline: auto;
 }

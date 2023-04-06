@@ -7,7 +7,7 @@ const ExpenseItem = () => {
   const expenseAmount = 294.67
 
   return (
-    <div className='expense-item max-width'>
+    <div className='expense-item container'>
       <div className="expense-item__title">
         <h2>{expenseTitle}</h2>
         <div className='expense-item__date'>{expenseDate.toISOString()}</div>
