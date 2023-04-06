@@ -5,29 +5,33 @@ function App() {
   const expenses = [
     {
       id: 1,
-      title: 'Car Insurance',
+      title: 'Toilet Paper',
       amount: 342.54,
-      date: new Date(),
+      date: new Date().toISOString(),
     },
 
     {
       id: 2,
       title: 'Car Insurance',
       amount: 342.54,
-      date: new Date(),
+      date: new Date().toISOString(),
     },
 
     {
       id: 3,
       title: 'Car Insurance',
       amount: 342.54,
-      date: new Date(),
+      date: new Date().toISOString(),
     },
   ]
 
   return (
     <div className="App">
-      <ExpenseItem/>
+      <ExpenseItem 
+        title={expenses[0].title}
+        amount={expenses[0].amount}
+        date={expenses[0].date}
+        />
       <ExpenseItem/>
     </div>
   )
