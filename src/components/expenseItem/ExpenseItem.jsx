@@ -1,7 +1,8 @@
 import './ExpenseItemStyle.css'
-import React from 'react'
+import React, {useState} from 'react'
 
 const ExpenseItem = ({title, amount, date}) => {
+  const [newTitle, setNewTitle] = useState(title)
   
   date = date?.toLocaleString('en-US', {month: 'long', day: '2-digit', year: 'numeric'})
 
@@ -10,13 +11,13 @@ const ExpenseItem = ({title, amount, date}) => {
   }
 
   const clickHandler = () => {
-    console.log('You click me ');
+    setNewTitle('updated')
   }
 
   return (
     <div className='expense-item'>
       <div className="expense-item__title">
-        <h2>{title}</h2>
+        <h2>{newTitle}</h2>
         <div className='expense-item__date'>{date}</div>
       </div>
       <div className='expense-item__description'>
