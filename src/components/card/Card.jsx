@@ -1,9 +1,9 @@
 import './CardStyle.css'
 import React from 'react'
 
-const Card = ({children}) => {
+const Card = ({children, className}) => {
   return (
-    <div className='card container'>{children}</div>
+    <div className={`card container ${className}`}>{children}</div>
   )
 }
 
