@@ -24,3 +24,30 @@
 .new-expense__actions {
   text-align: right;
 }
+
+.new-expense__actions button {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: .5rem 1rem;
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 5px;
+}
+
+.new-expense__actions button:hover,
+.new-expense__actions button:active {
+  background-color: #d66b2d;
+}
+
+.new-expense__actions button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.new-expense__actions button.alternative:hover,
+.new-expense__actions button.alternative:active {
+  background-color: #ddb3f8;
+}

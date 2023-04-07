@@ -1,13 +1,16 @@
 import './NewExpenseStyle.css'
-import { ExpenseForm } from '../../components'
+import { ExpenseForm, Card } from '../../components'
 import React from 'react'
 
 
 const NewExpenseSection = () => {
   return (
-    <div className='new-expense'>
-      <ExpenseForm/>
-    </div>
+    <Card>
+      <div className='new-expense'>
+        <ExpenseForm/>
+      </div>
+    </Card>
+    
   )
 }
 
