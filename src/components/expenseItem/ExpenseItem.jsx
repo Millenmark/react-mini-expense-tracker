@@ -9,6 +9,10 @@ const ExpenseItem = ({title, amount, date}) => {
     return value?.toLocaleString(local, {style: "currency", currency: currencySymbol})
   }
 
+  const clickHandler = () => {
+    console.log('You click me ');
+  }
+
   return (
     <div className='expense-item'>
       <div className="expense-item__title">
@@ -18,6 +22,10 @@ const ExpenseItem = ({title, amount, date}) => {
       <div className='expense-item__description'>
         <div className='expense-item__price'>{toCurrency(amount)}</div>
       </div>
+      <button 
+        type='button' 
+        onClick={clickHandler}
+      >Change Title</button>
     </div>
   )
 }
