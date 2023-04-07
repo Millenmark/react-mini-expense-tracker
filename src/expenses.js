@@ -8,8 +8,8 @@ export const expenses = [
 
   {
     id: 2,
-    title: 'Car Insurance',
-    amount: 342.54,
+    title: 'Ham silog',
+    amount: 32.00,
     date: new Date(),
   },
 
