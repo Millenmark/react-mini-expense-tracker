@@ -1,10 +1,11 @@
 import './App.css'
-import { ExpenseSection } from './containers'
+import { ExpenseSection, NewExpenseSection } from './containers'
 
 
 function App() {
   return (
     <div className="App">
+      <NewExpenseSection/>
       <ExpenseSection/>
     </div>
   )
