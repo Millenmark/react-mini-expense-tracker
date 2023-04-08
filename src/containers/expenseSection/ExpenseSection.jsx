@@ -1,10 +1,17 @@
 import './ExpenseSectionStyle.css'
-import { ExpenseItem, Card } from '../../components'
-import React from 'react'
+import { ExpenseItem, Card, ExpenseFilter } from '../../components'
+import React, {useState} from 'react'
 
 const ExpenseSection = ({expenses}) => {
+  const [filteredYear, setFilteredYear] = useState('2019')
+
+  const filterChangeHandler = selectedYear => {
+    setFilteredYear(selectedYear)
+  }
+
   return (
     <Card>
+      <ExpenseFilter filteredYear={filteredYear} filterChangeHandler={filterChangeHandler}/>
       {
         expenses.map(expense => (
           <ExpenseItem 
