@@ -1,7 +1,7 @@
 export const expenses = [
   {
     id: 1,
-    title: 'Toilet Paper',
+    title: 'Toilet Paperoty',
     amount: 342.54,
     date: new Date(),
   },

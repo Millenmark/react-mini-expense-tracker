@@ -1,9 +1,8 @@
 import './ExpenseSectionStyle.css'
 import { ExpenseItem, Card } from '../../components'
-import { expenses } from '../../expenses'
 import React from 'react'
 
-const ExpenseSection = () => {
+const ExpenseSection = ({expenses}) => {
   return (
     <Card>
       {

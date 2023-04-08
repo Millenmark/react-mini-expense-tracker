@@ -4,13 +4,15 @@ import React from 'react'
 import { nanoid } from 'nanoid'
 
 
-const NewExpenseSection = () => {
+const NewExpenseSection = ({addExpenseHandler}) => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
       id: nanoid(),
     }
-    console.log(expenseData);
+
+    addExpenseHandler(expenseData)
+    // console.log(expenseData);
   }
 
   return (
