@@ -3,24 +3,32 @@ import { ExpenseItem, Card, ExpenseFilter } from '../../components'
 import React, {useState} from 'react'
 
 const ExpenseSection = ({expenses}) => {
-  const [filteredYear, setFilteredYear] = useState('2019')
+  const yearNow = new Date().getFullYear().toString()
+  
+  const [filteredYear, setFilteredYear] = useState(yearNow)
 
   const filterChangeHandler = selectedYear => {
     setFilteredYear(selectedYear)
   }
 
+  const filteredExpenses = expenses.filter((expense) => {
+    return expense.date.getFullYear().toString() === filteredYear
+  })
+
   return (
     <Card>
       <ExpenseFilter filteredYear={filteredYear} filterChangeHandler={filterChangeHandler}/>
       {
-        expenses.map(expense => (
-          <ExpenseItem 
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-            key={expense.id}
-          />
-        ))
+        filteredExpenses.length === 0 ? (<p>No expenses Found.</p>) : (
+          filteredExpenses.map(expense => (
+            <ExpenseItem 
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+              key={expense.id}
+            />
+          ))
+        )
       }
     </Card>
   )
