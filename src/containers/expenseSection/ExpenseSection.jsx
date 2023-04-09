@@ -20,7 +20,7 @@ const ExpenseSection = ({expenses}) => {
       <ExpenseFilter filteredYear={filteredYear} filterChangeHandler={filterChangeHandler}/>
       {
         filteredExpenses.length === 0 
-        ? (<p>No expenses Found.</p>) 
+        ? (<p className='not-found'>No expenses found.</p>) 
         : (
           filteredExpenses.map(expense => (
             <ExpenseItem 
