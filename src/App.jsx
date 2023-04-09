@@ -1,12 +1,16 @@
 import './App.css'
 import { ExpenseSection, NewExpenseSection } from './containers'
-import {expenses} from './expenses'
+import {initialExpenses} from './expenses'
+import { useState } from 'react'
 
 
 function App() {
+  const [expenses, setExpenses] = useState(initialExpenses)
+
   const addExpenseHandler = expense => {
-    console.log('in app.js')
-    console.log(expense);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses]
+    })
   }
 
 
