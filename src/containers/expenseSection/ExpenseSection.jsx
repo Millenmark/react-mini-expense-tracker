@@ -19,7 +19,9 @@ const ExpenseSection = ({expenses}) => {
     <Card>
       <ExpenseFilter filteredYear={filteredYear} filterChangeHandler={filterChangeHandler}/>
       {
-        filteredExpenses.length === 0 ? (<p>No expenses Found.</p>) : (
+        filteredExpenses.length === 0 
+        ? (<p>No expenses Found.</p>) 
+        : (
           filteredExpenses.map(expense => (
             <ExpenseItem 
               title={expense.title}
