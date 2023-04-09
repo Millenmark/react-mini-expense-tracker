@@ -1,5 +1,6 @@
 import './ExpenseFormStyle.css'
 import React, {useState} from 'react'
+import { years } from '../../generalFunctions'
 
 const ExpenseForm = ({saveExpenseDataHandler}) => {
   const [userInput, setUserInput] = useState({
@@ -8,7 +9,8 @@ const ExpenseForm = ({saveExpenseDataHandler}) => {
     enteredDate: '',
   })
 
-
+  const minYear = years()[years().length - 1]
+  const maxYear = years()[0]
 
   const titleChangeHandler = (e) => {
     setUserInput((prevState) => {
@@ -47,7 +49,6 @@ const ExpenseForm = ({saveExpenseDataHandler}) => {
     })
   }
 
-
   return (
     <>
       <form action="" onSubmit={submitHandler}>
@@ -81,8 +82,8 @@ const ExpenseForm = ({saveExpenseDataHandler}) => {
               type="date" 
               name="" 
               id="date" 
-              min="2019-01-01" 
-              max="2025-12-31" 
+              min={`${minYear}-01-01`} 
+              max={`${maxYear}-12-31`}
               value={userInput.enteredDate}
               onChange={dateChangeHandler}
             />
