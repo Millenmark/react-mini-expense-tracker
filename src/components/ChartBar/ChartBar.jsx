@@ -1,7 +1,7 @@
 import React from 'react'
 import './ChartBarStyle.css'
 
-const ChartBar = () => {
+const ChartBar = ({value, maxValue, label}) => {
   return (
     <div>ChartBar</div>
   )
