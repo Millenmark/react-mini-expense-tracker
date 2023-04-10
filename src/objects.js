@@ -19,4 +19,11 @@ export const initialExpenses = [
     amount: 342.54,
     date: new Date(),
   },
+
+  {
+    id: 4,
+    title: 'Car Insurance',
+    amount: 342.54,
+    date: new Date(2021, 5, 7),
+  },
 ]

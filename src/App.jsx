@@ -1,6 +1,6 @@
 import './App.css'
-import { ExpenseSection, NewExpenseSection, ChartSection } from './containers'
-import {initialExpenses} from './expenses'
+import { ExpenseSection, NewExpenseSection } from './containers'
+import {initialExpenses} from './objects'
 import { useState } from 'react'
 
 
@@ -13,11 +13,9 @@ function App() {
     })
   }
 
-
   return (
     <div className="App">
       <NewExpenseSection addExpenseHandler={addExpenseHandler}/>
-      <ChartSection/>
       <ExpenseSection expenses={expenses}/>
     </div>
   )

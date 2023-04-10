@@ -1,5 +1,5 @@
 import './ExpenseSectionStyle.css'
-import { ExpenseItem, Card, ExpenseFilter } from '../../components'
+import { ExpenseItem, Card, ExpenseFilter, ExpenseChart } from '../../components'
 import React, {useState} from 'react'
 
 const ExpenseSection = ({expenses}) => {
@@ -15,8 +15,11 @@ const ExpenseSection = ({expenses}) => {
     return expense.date.getFullYear().toString() === filteredYear
   })
 
+  console.log(filteredExpenses);
+
   return (
     <Card>
+      <ExpenseChart expenses={filteredExpenses} />
       <ExpenseFilter filteredYear={filteredYear} filterChangeHandler={filterChangeHandler}/>
       {
         filteredExpenses.length === 0 
