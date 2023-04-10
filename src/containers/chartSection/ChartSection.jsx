@@ -1,11 +1,12 @@
 import React from 'react'
 import './ChartSectionStyle.css'
-import { Card } from '../../components'
+import { Card, ChartBar } from '../../components'
 
 const ChartSection = () => {
   return (
     <Card>
       ChartSection
+      <ChartBar/>
     </Card>
   )
 }
