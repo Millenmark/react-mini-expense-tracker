@@ -24,9 +24,9 @@ const ExpenseChart = ({expenses}) => {
   }
 
   return (
-    <>
+    <div className='chart-container'>
       <Chart dataPoints={chartDataPoints} />
-    </>
+    </div>
   )
 }
 

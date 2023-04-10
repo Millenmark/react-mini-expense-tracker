@@ -15,7 +15,6 @@ const ExpenseSection = ({expenses}) => {
     return expense.date.getFullYear().toString() === filteredYear
   })
 
-  console.log(filteredExpenses);
 
   return (
     <Card>
