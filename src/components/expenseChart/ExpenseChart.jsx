@@ -1,6 +1,6 @@
 import React from 'react'
 import './ExpenseChartStyle.css'
-import Chart from '../Chart/Chart'
+import Chart from '../chart/Chart'
 
 const ExpenseChart = ({expenses}) => {
   const chartDataPoints = [
