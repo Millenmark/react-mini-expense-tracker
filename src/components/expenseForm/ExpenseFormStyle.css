@@ -46,12 +46,15 @@
   color: white;
   border-radius: 5px;
   width: 100%;
+  margin-top: 1.5rem;
+
 
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 450px) {
   .new-expense__actions button {
     width: auto;
+    /* margin-top: 0; */
   }
 }
 
