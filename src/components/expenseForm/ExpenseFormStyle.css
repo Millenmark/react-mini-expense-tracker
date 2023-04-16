@@ -14,7 +14,7 @@
 }
 
 .new-expense__control:last-child input {
-  width: 100%;
+  width: auto;
 }
 
 .new-expense__control label {
