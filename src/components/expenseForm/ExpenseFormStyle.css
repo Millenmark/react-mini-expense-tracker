@@ -13,6 +13,10 @@
   flex: 1 1 220px;
 }
 
+.new-expense__control:last-child input {
+  width: 100%;
+}
+
 .new-expense__control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -41,6 +45,14 @@
   background-color: var(--color-primary);
   color: white;
   border-radius: 5px;
+  width: 100%;
+
+}
+
+@media screen and (min-width: 350px) {
+  .new-expense__actions button {
+    width: auto;
+  }
 }
 
 .new-expense__actions button:hover,
